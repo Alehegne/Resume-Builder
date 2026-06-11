@@ -2,18 +2,6 @@
 
 A modern, full-featured resume builder application built with Next.js, React, and JavaScript. Create beautiful, professional resumes with real-time preview and PDF export.
 
-## 👥 Group Members
-
-| Roll Number | Group Members        | ID (ETS)       | GitHub Profile                                              |
-| ----------- | -------------------- | -------------- | ----------------------------------------------------------- |
-| 1           | **Ahlam Ahmed**      | **ETS0115/16** | [Ahlamv](https://github.com/Ahlamv)                         |
-| 2           | **Alehegn Geta**     | **ETS0130/16** | [Alehegne](https://github.com/Alehegne)                     |
-| 3           | **Amanawit Behailu** | **ETS0135/16** | [Amanawit22](http://github.com/Amanawit22)                  |
-| 4           | **Amanuel Ayele**    | **ETS0140/16** | [Manu3lde](https://github.com/Manu3lde)                     |
-| 5           | **Amanuel Getachew** | **ETS0147/16** | [Amanuel-Getachew-K](https://github.com/Amanuel-Getachew-K) |
-| 6           | **Amanuel Habtamu**  | **ETS0148/16** | [AmananuelHab](https://github.com/AmanuelHab)               |
-
-
 ## Features
 
 - **User Authentication**: Simple signup and login system
@@ -42,23 +30,26 @@ A modern, full-featured resume builder application built with Next.js, React, an
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - pnpm (or npm/yarn)
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd resume-builder
 ```
 
 2. Install dependencies:
+
 ```bash
 pnpm install
 ```
 
 3. Run the development server:
+
 ```bash
 pnpm dev
 ```
@@ -92,11 +83,13 @@ src/
 ## Usage
 
 ### 1. Sign Up / Login
+
 - Visit the home page and click "Get Started Free"
 - Fill in your name, email, and password
 - Or login if you already have an account
 
 ### 2. Build Your Resume
+
 - Fill in your personal information
 - Add your education background
 - Add your work experience
@@ -105,11 +98,13 @@ src/
 - Choose your preferred resume template
 
 ### 3. Download
+
 - Click the "Download PDF" button to export your resume
 
 ## Form Validation
 
 All forms include validation for:
+
 - Required fields
 - Email format
 - Password strength (minimum 6 characters)
@@ -119,11 +114,13 @@ All forms include validation for:
 ## Resume Templates
 
 ### Modern Professional
+
 - Clean, modern design with clear section headers
 - Organized layout with professional typography
 - Perfect for traditional and creative roles
 
 ### Minimal Professional
+
 - Minimalist design with elegant spacing
 - Simplified typography
 - Great for tech and creative industries
@@ -140,6 +137,7 @@ All forms include validation for:
 ### Form Validation
 
 Add validation rules to `src/utils/validators.js`:
+
 ```javascript
 export const validateYourField = (value) => {
   const errors = {};
@@ -151,15 +149,12 @@ export const validateYourField = (value) => {
 ### Creating a New Template
 
 Create a new template in `src/components/templates/`:
+
 ```javascript
 export default function TemplateCustom({ resume }) {
   const { personal, education, experience, skills, projects } = resume;
-  
-  return (
-    <div id="resume-custom">
-      {/* Template markup */}
-    </div>
-  );
+
+  return <div id="resume-custom">{/* Template markup */}</div>;
 }
 ```
 
@@ -184,6 +179,7 @@ Modify the color tokens to customize the theme globally.
 ## PDF Export
 
 The PDF export uses html2pdf.js to convert the DOM to PDF. The export:
+
 - Captures the resume-modern template
 - Maintains styling and formatting
 - Generates a downloadable PDF file
@@ -212,4 +208,5 @@ MIT
 ## Support
 
 For issues, questions, or suggestions, please open an issue in the repository.
+
 # resume_builder_frontend_next_js
