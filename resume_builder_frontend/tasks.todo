@@ -1,0 +1,59 @@
+#TODO interest is hardcoded in the frontend, so we need to add it to the backend as well.
+#TODO list of created resumes for the user so that they can edit it too
+
+
+
+
+front expects this
+/*
+data field types
+initialResume = {
+  id: string,
+  personal: {
+    fullName: string,
+    email: string,
+    phone: string,
+    address: string,
+},
+education: [
+  {
+    id: string,
+    institution: string,
+    degree: string,
+    fieldOfStudy: string,
+    startDate: string,
+    endDate: string,
+    description: string,
+  }
+],
+experience: [
+  {
+    id: string,
+    jobTitle: string,
+    company: string,
+    location: string,
+    startDate: string,
+    endDate: string,
+    description: string,
+  }
+],
+skills: [string],
+projects: [
+  {
+    id: string,
+    title: string,
+    description: string,
+    link: string,
+  }
+],
+selectedTemplate: string
+}
+
+*/
+- flow of resume creation:
+1. the user creates a resume
+  - fronend sends a post request to api/resume/create.php with
+     {
+        resumeTitle: string,
+        template: string either "template1" or "template2"
+     }
